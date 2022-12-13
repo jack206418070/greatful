@@ -389,7 +389,7 @@ header {
   margin-top: 150px;
   position: relative;
   background-image: url(./首頁//網頁設計-04.png);
-  background-position: 850px bottom;
+  background-position: 120% bottom;
   background-size: contain;
   background-repeat: no-repeat;
   padding-bottom: 150px;
@@ -472,7 +472,7 @@ header {
   margin-top: 50px;
   padding-bottom: 100px;
   background-image: url(./首頁/網頁設計-03.png);
-  background-position: -250px bottom;
+  background-position: -40% bottom;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -503,6 +503,18 @@ header {
      object-fit: contain;
 }
 
+.service ul li:hover p {
+  opacity: 1;
+}
+
+.service ul li:hover .line:after {
+  top: -300px;
+  width: 150px;
+  height: 120px;
+  z-index: -1;
+  opacity: .7;
+}
+
 .service ul h3 {
   color: #37AE7F;
   font-weight: 500;
@@ -511,19 +523,32 @@ header {
   padding: 16px 0;
   font-size: 24px;
   position: relative;
-  margin-bottom: 30px;
 }
 
-.service ul h3:before {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
+.service ul .line {
   width: 50%;
   height: 2px;
   background-color: #37AE7F;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.service ul .line:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: #FF933D;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .service ul p {
@@ -533,5 +558,8 @@ header {
   letter-spacing: 2px;
   line-height: 1.5;
   margin-bottom: 20px;
+  opacity: .5;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 /*# sourceMappingURL=all.css.map */
