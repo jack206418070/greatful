@@ -390,11 +390,29 @@ header {
     color: $thirdary;
   }
 }
+@keyframes rotateControll {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .service {
   margin-top: 50px;
   padding-bottom: 100px;
   background-image: url(./首頁/網頁設計-03.png);
-  background-position: -20% bottom;
+  background-position: -40% bottom;
   background-size: contain;
   background-repeat: no-repeat;
   ul {
@@ -409,18 +427,24 @@ header {
         height: 180px;
         width: 100%;
         object-fit: contain;
+        transition: .5s;
       }
       &:hover {
+        img {
+          animation-name: rotateControll;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
         p {
           opacity: 1;
         }
         .line {
           &:after {
             top: -300px;
-            width: 150px;
-            height: 120px;
-            z-index: -1;
-            opacity: .7;
+            width: 160px;
+            height: 160px;
+            opacity: .2;
           }
         }
       }
@@ -453,7 +477,7 @@ header {
         border-radius: 50%;
         height: 15px;
         width: 15px;
-        background-color: $secondary;
+        background-color: #DCDDDD;
         transition: .5s;
       }
     }
