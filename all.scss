@@ -2,75 +2,171 @@
 $primary: #37AE7F;
 $secondary: #FF933D;
 $thirdary: #717171;
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
   font-family: 'Noto Serif TC', serif, 'Roboto', sans-serif;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
+
 * {
- box-sizing: border-box; 
+  box-sizing: border-box;
 }
+
 body {
   overflow-x: hidden;
 }
+
 a {
   text-decoration: none;
 }
+
 img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
 }
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
 }
+
 .d-flex {
   display: flex;
 }
+
 .justify-between {
   justify-content: space-between;
 }
+
 .align-center {
   align-items: center;
 }
@@ -85,11 +181,18 @@ h1 {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
+
+  @media (max-width: 996px) {
+    height: 60px;
+    width: calc(100% - 100px);
+  }
+
   a {
-    display:block; 
+    display: block;
     height: 100%;
   }
 }
+
 header {
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -99,6 +202,7 @@ header {
   z-index: 100;
   padding: 0 20px;
 }
+
 @keyframes MoveToBig {
   0% {
     padding: 8px 0px;
@@ -106,12 +210,14 @@ header {
     font-size: 12px;
     opacity: 1;
   }
-  50% { 
+
+  50% {
     padding: 12px 0px;
     width: 100%;
     font-size: 14px;
     opacity: 0.7;
   }
+
   100% {
     padding: 8px 0px;
     width: 80%;
@@ -126,12 +232,18 @@ header {
   padding-right: 120px;
   position: relative;
   font-family: 'Noto Serif TC', serif;
+
+  @media (max-width: 996px) {
+    display: none;
+  }
+
   li {
     &.connection-block {
       position: absolute;
       right: 0;
       width: 100px;
     }
+
     &:nth-child(1) {
       a {
         &:hover {
@@ -148,6 +260,7 @@ header {
         }
       }
     }
+
     &:nth-child(2) {
       a {
         &:hover {
@@ -164,6 +277,7 @@ header {
         }
       }
     }
+
     &:nth-child(3) {
       a {
         &:hover {
@@ -180,6 +294,7 @@ header {
         }
       }
     }
+
     &:nth-child(4) {
       a {
         &:hover {
@@ -196,6 +311,7 @@ header {
         }
       }
     }
+
     &:nth-child(5) {
       a {
         &:hover {
@@ -213,6 +329,7 @@ header {
       }
     }
   }
+
   a {
     color: $thirdary;
     display: block;
@@ -220,6 +337,7 @@ header {
     letter-spacing: 1.3px;
     position: relative;
     transition: .3s;
+
     &.connection {
       position: absolute;
       width: 100%;
@@ -236,15 +354,19 @@ header {
       letter-spacing: 0.5px;
       animation-name: MoveToBig;
       animation-duration: 3s;
-      animation-iteration-count: infinite;    /*動畫次數，infinite 為無限次*/  
+      animation-iteration-count: infinite;
+
+      /*動畫次數，infinite 為無限次*/
       &:before {
         opacity: 0;
       }
+
       &:hover {
         color: #fff;
       }
     }
-    &:before{
+
+    &:before {
       content: '';
       position: absolute;
       bottom: 0;
@@ -256,14 +378,100 @@ header {
       width: 0px;
       transition: .3s;
     }
-    &:hover{
+
+    &:hover {
       color: #fff;
-      &:before{
+
+      &:before {
         width: 70%;
       }
     }
   }
 }
+
+.header {
+  @media (max-width: 996px) {
+    justify-content: flex-start;
+    padding: 20px 0;
+  }
+}
+
+.toggle {
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 996px) {
+    display: block;
+    font-size: 32px;
+    width: 50px;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  height: calc(100% - 100px);
+  width: 30%;
+  top: 100px;
+  left: -100%;
+  background-color: #fff;
+  padding: 0 30px;
+  padding-top: 30px;
+  z-index: 99;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: left 0.5s;
+
+  &.show {
+    left: 0;
+  }
+
+  @media (max-width: 576px) {
+    width: 50%;
+  }
+
+  a {
+    display: block;
+    font-size: 24px;
+    color: $thirdary;
+    letter-spacing: 3px;
+    padding: 13px 0;
+
+    &.connection {
+      text-align: center;
+      color: #fff;
+      opacity: 1;
+      width: 60%;
+      margin: 0 auto;
+      background-color: $primary;
+      border-radius: 20px;
+      padding: 8px 0;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      animation-name: MoveToBig;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+
+      /*動畫次數，infinite 為無限次*/
+      &:before {
+        opacity: 0;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  li {
+    &.connection-block {
+      margin-top: auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
 .banner {
   margin-top: 120px;
   background-image: url(./首頁/網頁設計-18.png);
@@ -271,7 +479,57 @@ header {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  flex-wrap: wrap;
+
+  @media (max-width: 996px) {
+    margin-top: 100px;
+    height: calc(100vh - 100px);
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
+
+.mobile-banner {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background-image: url(./首頁/網頁設計-18.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+  }
+  .english {
+    display: flex;
+    gap: 5px;
+    img {
+      height: 30px;
+      width: 30px;
+      object-fit: contain;
+    }
+  }
+  .chinese {
+    p {
+      // padding-left: 1.5%;
+      color: $thirdary;
+      font-size: 18px;
+      font-weight: bold;
+      text-justify: inter-ideograph;
+      text-align-last: justify;
+      text-align: justify;
+      margin-top: 20px;
+      width: 100%;
+      letter-spacing: .5rem;
+    }
+  }
+}
+
 
 .logoText {
   width: 50%;
@@ -280,10 +538,12 @@ header {
   justify-content: flex-end;
   align-items: flex-end;
   padding-bottom: 30px;
+
   img {
     vertical-align: middle;
     width: 70%;
   }
+
   p {
     padding-bottom: 5px;
     padding-right: 5px;
@@ -292,21 +552,28 @@ header {
     font-size: 18px;
     font-weight: bold;
     text-justify: inter-ideograph;
-    text-align-last:justify; 
+    text-align-last: justify;
     text-align: justify;
     width: 70%;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
+
 .enText {
   width: 50%;
   position: relative;
+
   img {
     width: 100px;
     height: 150px;
     vertical-align: middle;
     object-fit: contain;
-    padding: 10px;
+    // padding: 10px;
   }
+
   .abs {
     width: 100%;
     display: flex;
@@ -318,8 +585,53 @@ header {
     left: 0;
     right: 0;
     margin: auto;
+
+    .mobile_p {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 60%;
+
+    .abs {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      bottom: 40%;
+
+      p.mobile_p {
+        display: block;
+        padding-bottom: 5px;
+        padding-right: 20px;
+        padding-left: 5px;
+        padding-top: 20px;
+        color: $thirdary;
+        font-size: 16px;
+        font-weight: bold;
+        text-justify: inter-ideograph;
+        text-align-last: justify;
+        text-align: justify;
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    img {
+      width: 25px;
+      height: 50px;
+    }
   }
 }
+
 .story {
   margin-top: 150px;
   position: relative;
@@ -328,6 +640,7 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   padding-bottom: 150px;
+
   .bg-right-2 {
     position: absolute;
     height: 60%;
@@ -335,6 +648,7 @@ header {
     right: 0px;
     bottom: -30px;
     z-index: 0;
+
     img {
       height: 100%;
       object-fit: contain;
@@ -343,8 +657,10 @@ header {
       display: block;
     }
   }
+
   .img-logo {
     position: relative;
+
     &:before {
       position: absolute;
       content: '';
@@ -356,6 +672,7 @@ header {
       width: 40%;
       background-color: $secondary;
     }
+
     &:after {
       position: absolute;
       content: '';
@@ -367,6 +684,7 @@ header {
       width: 40%;
       background-color: $secondary;
     }
+
     img {
       height: 130px;
       width: 130px;
@@ -374,6 +692,7 @@ header {
       display: block;
     }
   }
+
   h2 {
     margin-top: 20px;
     margin-bottom: 30px;
@@ -384,6 +703,7 @@ header {
     font-style: italic;
     letter-spacing: 1.3px;
   }
+
   p {
     letter-spacing: 2px;
     line-height: 2;
@@ -392,20 +712,59 @@ header {
     padding: 5px 0;
     color: $thirdary;
   }
+  .desc-mobile {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    margin-top: 50px;
+    background-image: none;
+    padding-bottom: 0;
+    .desc {
+      display: none;
+    }
+    .desc-mobile {
+      display: block;
+    }
+    .img-logo img {
+      height: 100px;
+      width: 100px;
+    }
+    .img-logo {
+      &:before {
+        width: 33%;
+      }
+      &:after {
+        width: 33%;
+      }
+    }
+    .bg-right-2 {
+      display: none;
+    }
+    p {
+      line-height: 2;
+      font-size: 16px;
+      padding: 0 20px;
+    }
+  }
 }
+
 @keyframes rotateControll {
   0% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(15deg);
   }
+
   50% {
     transform: rotate(0deg);
   }
+
   75% {
     transform: rotate(-15deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -418,20 +777,24 @@ header {
   background-position: -40% bottom;
   background-size: contain;
   background-repeat: no-repeat;
+
   ul {
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
     justify-content: space-between;
+
     li {
       width: 23%;
       align-items: flex-start;
+
       img {
         height: 180px;
         width: 100%;
         object-fit: contain;
         transition: .5s;
       }
+
       &:hover {
         img {
           animation-name: rotateControll;
@@ -439,9 +802,11 @@ header {
           animation-iteration-count: infinite;
           animation-timing-function: linear;
         }
+
         p {
           opacity: 1;
         }
+
         .line {
           &:after {
             top: -300px;
@@ -452,6 +817,7 @@ header {
         }
       }
     }
+
     h3 {
       color: $primary;
       font-weight: 500;
@@ -461,6 +827,7 @@ header {
       font-size: 24px;
       position: relative;
     }
+
     .line {
       width: 50%;
       height: 2px;
@@ -469,6 +836,7 @@ header {
       margin-top: 10px;
       margin-bottom: 30px;
       position: relative;
+
       &:after {
         position: absolute;
         content: '';
@@ -484,6 +852,7 @@ header {
         transition: .5s;
       }
     }
+
     p {
       text-align: center;
       font-size: 18px;
@@ -495,10 +864,38 @@ header {
       transition: .5s;
     }
   }
+  @media (max-width: 768px) {
+    padding-bottom: 0;
+    ul {
+      p {
+        opacity: 1;
+      }
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        width: 85%;
+        padding: 30px 0;
+        background-color: rgba(114, 113, 113, 0.1);
+        border-radius: 20px;
+        margin-bottom: 50px;
+        .line {
+          width: 80%;
+          &:after {
+            display: none;
+          }
+        }
+        img {
+          display: none;
+        }
+      }
+    }
+  }
 }
+
 .joint {
   margin-top: 60px;
   position: relative;
+
   .bg-joint {
     position: absolute;
     display: flex;
@@ -508,17 +905,37 @@ header {
     z-index: -1;
     object-fit: contain;
   }
+
   padding-bottom: 150px;
+
+  .desc {
+    color: $thirdary;
+    letter-spacing: 0.5rem;
+    font-size: 22px;
+    margin-bottom: 60px;
+    text-align: justify;
+
+    p {
+      line-height: 2;
+      &.mobile {
+        display: none;
+      }
+    }
+  }
+
   .content {
     margin-top: 50px;
     padding: 0 80px;
+
     img {
       width: 100%;
       object-fit: contain;
     }
+
     .area-1 {
       display: flex;
       justify-content: space-between;
+
       img {
         width: 13%;
         height: 130px;
@@ -526,9 +943,11 @@ header {
         object-fit: contain;
       }
     }
+
     .area-2 {
       display: flex;
       justify-content: space-between;
+
       img {
         width: 25%;
         height: 130px;
@@ -536,9 +955,11 @@ header {
         object-fit: contain;
       }
     }
+
     .area-3 {
       display: flex;
       justify-content: space-between;
+
       img {
         width: 25%;
         height: 130px;
@@ -546,9 +967,11 @@ header {
         object-fit: contain;
       }
     }
+
     .area-4 {
       display: flex;
       justify-content: space-between;
+
       img {
         width: 25%;
         height: 130px;
@@ -557,9 +980,33 @@ header {
       }
     }
   }
+  @media (max-width: 768px) {
+    padding-bottom: 60px;
+    margin-top: 30px;
+    .content {
+      margin-top: 20px;
+      padding: 0;
+    }
+    .desc {
+      margin-bottom: 0;
+      p {
+        &.desk {
+          display: none;
+        }
+        &.mobile {
+          display: block;
+          text-align: center;
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
 }
+
 .title {
   margin-bottom: 40px;
+
   span {
     color: $thirdary;
     font-size: 24px;
@@ -567,22 +1014,38 @@ header {
     display: block;
     margin-bottom: 16px;
   }
+
   p {
     font-size: 48px;
     color: $primary;
     font-weight: bold;
     letter-spacing: 6px;
   }
+  @media (max-width:768px) {
+    margin-bottom: 30px;
+    p {
+      font-size: 36px;
+      text-align: center;
+    }
+    span {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
 }
+
 .example {
-  margin-bottom: 100px;
+  margin-bottom: 200px;
+
   ul {
     width: 100%;
     justify-content: space-between;
     margin-bottom: 50px;
   }
+
   li {
     width: calc(100% / 7);
+
     &:nth-child(1) {
       a {
         &:before {
@@ -590,6 +1053,7 @@ header {
         }
       }
     }
+
     &:nth-child(2) {
       a {
         &:before {
@@ -597,6 +1061,7 @@ header {
         }
       }
     }
+
     &:nth-child(3) {
       a {
         &:before {
@@ -604,6 +1069,7 @@ header {
         }
       }
     }
+
     &:nth-child(4) {
       a {
         &:before {
@@ -611,6 +1077,7 @@ header {
         }
       }
     }
+
     &:nth-child(5) {
       a {
         &:before {
@@ -618,6 +1085,7 @@ header {
         }
       }
     }
+
     &:nth-child(6) {
       a {
         &:before {
@@ -625,6 +1093,7 @@ header {
         }
       }
     }
+
     &:nth-child(7) {
       a {
         &:before {
@@ -632,12 +1101,14 @@ header {
         }
       }
     }
+
     a {
       color: $thirdary;
       letter-spacing: 1.2px;
       display: block;
       position: relative;
       transition: 0.2s;
+
       &:before {
         position: absolute;
         content: '';
@@ -651,8 +1122,10 @@ header {
         transition: .3s;
         z-index: -1;
       }
+
       &:hover {
         color: #fff;
+
         &:before {
           top: 0;
           opacity: 1;
@@ -663,12 +1136,38 @@ header {
       }
     }
   }
+  .mobile-example {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    ul {
+      display: none;
+    }
+    .mobile-example {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2%;
+      width: 100%;
+      &-item {
+        width: 48%;
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+    .swiper {
+      display: none;
+    }
+
+  }
 }
 
 .swiper {
   width: 100%;
   height: 340px;
   padding-bottom: 100px;
+
   img {
     border-radius: 10px;
     width: 100%;
@@ -676,10 +1175,13 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     display: block;
   }
-  .swiper-button-prev, .swiper-button-next {
+
+  .swiper-button-prev,
+  .swiper-button-next {
     &:after {
       content: ''
     }
+
     color: $primary;
     width: 40px;
     height: 40px;
@@ -687,6 +1189,7 @@ header {
     border: 2px solid $primary;
     top: 280px;
     transition: .5s;
+
     &:hover {
       background-color: $primary;
       color: #fff;
@@ -694,15 +1197,50 @@ header {
   }
 }
 
+.top_bg {
+  height: 160px;
+  overflow-x: hidden;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 110%;
+    left: -5%;
+    height: 160px;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    background-color: $primary;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
 footer {
-  padding: 40px 0;
+  // border-top-left-radius: 65% 40%;
+  // border-top-right-radius: 65% 40%;
+  padding-bottom: 5%;
+  padding-top: 20px;
   background-color: $primary;
+  position: relative;
+
+  // overflow: hidden;
+  // z-index: -1;
+  .top_bg {
+    position: absolute;
+    width: 110%;
+    height: 160px;
+    top: -160px;
+    left: -5%;
+    position: absolute;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    background-color: $primary;
+  }
   h2 {
     font-size: 32px;
     color: #fff;
     font-weight: bold;
     position: relative;
     margin-bottom: 40px;
+
     &:before {
       position: absolute;
       content: '';
@@ -712,20 +1250,24 @@ footer {
       margin: auto;
       height: 1px;
       background-color: #fff;
-      width: 76%;
+      width: calc(80% - 120px);
       margin-left: 20px;
     }
   }
+
   .footer-menu {
     display: flex;
+
     li {
       width: 33.333%;
+
       p {
         color: #fff;
         font-size: 20px;
         letter-spacing: 1px;
         line-height: 1.8;
       }
+
       h3 {
         font-size: 48px;
         letter-spacing: 5px;
@@ -733,6 +1275,7 @@ footer {
         line-height: 1.8;
       }
     }
+
     .left {
       a {
         display: block;
@@ -743,10 +1286,12 @@ footer {
       }
     }
   }
+
   .socalMedia {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+
     a {
       display: flex;
       align-items: center;
@@ -759,10 +1304,872 @@ footer {
       border-radius: 50%;
       background-color: #fff;
       transition: .5s;
+
       &:hover {
         background-color: $secondary;
         color: #fff;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    // padding-bottom: 0;
+    h2 {
+      text-align: center;
+      margin-top: 10px;
+      padding-bottom: 20px;
+      font-size: 24px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #fff;
+      border-width: 70%;
+      &:before {
+        display: none;
+      }
+    }
+    .footer-menu {
+      flex-direction: column;
+      li {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        &:first-child {
+          display: none;
+        }
+        .desk {
+          display: none;
+        }
+        p {
+          font-size: 16px;
+          width: 100%;
+          text-align: center;
+        }
+        .socalMedia {
+          margin-top: 20px;
+          display: flex;
+          width: 100%;
+          gap: 30px;
+          flex-direction: row;
+          justify-content: center;
+          a {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-banner, .marking-banner {
+  margin-top: 120px;
+  background-image: url(./關於我/網頁設計_關於我-BN.png);
+  height: calc(100vh - 120px);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .about-logo {
+    width: 30%;
+
+    img {
+      object-fit: contain;
+    }
+  }
+  @media (max-width:768px) {
+    margin-top: 100px;
+    height: 500px;
+  }
+}
+
+.aboutUs {
+  margin-top: 30px;
+  margin-bottom: 150px;
+
+  .desc {
+    color: $thirdary;
+    letter-spacing: 0.5rem;
+    font-size: 22px;
+    margin-bottom: 60px;
+    text-align: justify;
+
+    p {
+      line-height: 2;
+      &.mobile {
+        display: none;
+      }
+    }
+  }
+  .img-group {
+    display: flex;
+    gap: 2%;
+    div {
+      width: 31.3333%;
+      img {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+  @media (max-width:768px) {
+    margin-bottom: 60px;
+    .desc {
+      margin-bottom: 30px;
+      p {
+        display: none;
+      }
+      p.mobile {
+        display: block;
+        font-size: 14px;
+        line-height: 2;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+    }
+    .img-group {
+      div {
+        width: 48%;
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.proService {
+  margin-bottom: 250px;
+
+  .card {
+    background-color: lighten($color: gray, $amount: 35);
+    position: relative;
+    margin-bottom: 80px;
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary;
+      padding: 32px 0;
+      width: 50%;
+      position: absolute;
+      color: white;
+      border-radius: 60px 0 0 60px;
+      font-size: 24px;
+      letter-spacing: 1.3px;
+      top: -28px;
+
+      &.right {
+        right: 0
+      }
+
+      &.left {
+        left: 0;
+        border-radius: 0 60px 60px 0;
+      }
+
+      span {
+        letter-spacing: 3px;
+        padding-left: 16px;
+      }
+    }
+
+    &-content {
+      display: flex;
+
+      &.reserve {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &-img {
+      width: 50%;
+      padding: 60px;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+        width: 80%;
+        height: 400px;
+      }
+    }
+
+    &-desc {
+      align-self: center;
+      width: 50%;
+      padding-top: 60px;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        padding-left: 30%;
+
+        img {
+          height: 30px;
+          width: 30px;
+        }
+
+        p {
+          color: $thirdary;
+          font-size: 20px;
+          letter-spacing: 2px;
+          padding-left: 16px;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.web-banner {
+  background-image: url('./網頁設計/光果網站｜網設介紹_太空背景\ 1.png');
+  height: calc(100vh - 120px);
+  margin-top: 120px;
+  @media (max-width: 768px) {
+    background-image: url('./網頁設計/光果網站｜網設介紹_BN-背.jpg');
+    height: 500px;
+    margin-top: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+  }
+  .img {
+    position: absolute;
+
+    img {
+      object-fit: contain;
+    }
+
+    &.purple-moon {
+      top: 20%;
+      left: 23%;
+    }
+
+    &.red-moon {
+      top: 6%;
+      right: 7%;
+    }
+    &.purple-moon-cat {
+      right: 7%;
+      bottom: -15%;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -65px;
+        left: 10px;
+        background-image: url('./網頁設計/光果網站｜首頁_貓-3.png');
+        height: 200px;
+        width: 200px;
+        transform: scale(1.1);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+    &.astronaut {
+      top: 30%;
+      transform: scale(0.8);
+    }
+    &.computed {
+      right: 10%;
+      top: 40%;
+      transform: scale(1);
+    }
+    &.chinese {
+      bottom: 100px;
+      left: 65px;
+      transform: scale(0.9);
+      margin-bottom: 20px;
+    }
+    &.english {
+      bottom: 60px;
+      left: 70px;
+      transform: scale(0.9);
+    }
+    &.logo {
+      bottom: -48%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }
+    @media (max-width: 768px) {
+      &.purple-moon {
+        top: -10%;
+        left: 8%;
+        transform: scale(0.3);
+      }
+  
+      &.red-moon {
+        top: -28%;
+        right: -30%;
+        transform: scale(0.3);
+      }
+      &.purple-moon-cat {
+        display: none;
+      }
+      &.astronaut {
+        top: -15%;
+        left: -35%;
+        transform: scale(0.3);
+      }
+      &.computed {
+        width: 90%;
+        right: -18%;
+        top: 18%;
+        transform: scale(0.6);
+      }
+      &.chinese {
+        top: 36%;
+        bottom: auto;
+        left: -30.5%;
+        transform: scale(0.4);
+      }
+      &.english {
+        top: 50%;
+        bottom: auto;
+        left: -30%;
+        transform: scale(0.4);
+      }
+      &.logo {
+        display: none;
+      }
+      &.line {
+        bottom: 10%;
+        left: 20%;
+        transform: scale(0.7);
+      }
+      &.astronaut2 {
+        bottom: -10%;
+        left: 25%;
+      }
+    }
+  }
+}
+
+.web-service {
+  margin-top: 300px;
+  h3 {
+    padding-left: 100px;
+    margin-bottom: 80px;
+
+    p {
+      color: #727171;
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    span {
+      color: #37AF7D;
+      font-weight: bold;
+      font-size: 42px;
+      letter-spacing: 10px;
+    }
+  }
+
+  .item-service {
+    display: flex;
+    gap: 1%;
+    flex-wrap: wrap;
+
+    li {
+      width: 32.3333%;
+      margin-bottom: 80px;
+
+      img {
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 1.3px;
+        color: #727171;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    h3 {
+      padding: 0;
+      text-align: center;
+      margin-bottom: 50px;
+      p {
+        font-size: 20px;
+        letter-spacing: 0.5px;
+      }
+      span {
+        font-size: 32px;
+        letter-spacing: 5px;
+        padding-left: 4px;
+      }
+    }
+    .item-service {
+      li {
+        width: 49%;
+        margin-bottom: 40px;
+        p {
+          font-size: 18px;
+          line-height: 1.2;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.web-porfolio {
+  margin-bottom: 60px;
+  text-align: center;
+  h3 {
+    text-align: center;
+    margin-bottom: 80px;
+    p {
+      color: #727171;
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    span {
+      color: #37AF7D;
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: 32px;
+      padding-left: 32px;
+    }
+  }
+  .web-porfolio-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      width: 35%;
+      margin-bottom: 40px;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    h3 {
+      padding: 0;
+      text-align: center;
+      margin-bottom: 50px;
+      p {
+        font-size: 20px;
+        letter-spacing: 0.5px;
+      }
+      span {
+        font-size: 32px;
+        letter-spacing: 12px;
+        padding-left: 10px;
+      }
+    }
+    .web-porfolio-item {
+      li {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    }
+  }
+}
+.web-desc {
+  background-image: url('./網頁設計/光果網站｜網設介紹_背景-2\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 120px;
+  &:before {
+    content: '';
+    background-image: url('./網頁設計/光果網站｜網設介紹_地球\ 1.png');
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+    left: 150px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .inner {
+      margin-top: 300px;
+      margin-bottom: 120px;
+      width: 50%;
+      p {
+        color: #717171;
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+      span {
+        font-size: 32px;
+        font-weight: bold;
+        color: #727171;
+        display: block;
+        margin-bottom: 20px;
+        text-align: justify;
+        text-justify: inter-ideograph;
+        text-align-last: justify;
+        &.green {
+          color: #37AE7D;
+          font-size: 48px;
+        }
+      }
+    }
+    .qa {
+      width: 50%;
+      margin-bottom: 80px;
+      position: relative;
+      z-index: 10;
+      li {
+        margin-bottom: 34px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 24px;
+          height: 24px;
+          max-width: none;
+          display: block;
+        }
+        p {
+          color: #727171;
+          font-weight: 600;
+          font-family: 'Inter';
+          font-size: 18px;
+          letter-spacing: 0.24rem;
+          padding-left: 18px;
+        }
+      }
+    }
+  }
+  .ask-btn {
+    margin-bottom: 200px;
+    a {
+      display: block;
+      border-radius: 40px;
+      background-color: #37AE7D;
+      text-decoration: none;
+      color: #fff;
+      padding: 24px 40px;
+      letter-spacing: 2rem;
+      font-size: 32px;
+      font-weight: 600;
+      position: relative;
+      &:before {
+        pointer-events: none;
+        position: absolute;
+        content: '';
+        background-image: url('./網頁設計/Group\ 22.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        width: 40%;
+        height: 15%;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 0;
+    background-image: none;
+    background-image: url('./網頁設計/Vector\ 7.png');
+    background-position: center center;
+    &:before {
+      content: '';
+      background-image: url('./網頁設計/光果網站｜網設介紹_地球\ 1.png');
+      width: 320px;
+      height: 320px;
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      top: 22%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .container {
+      .inner {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 30px;
+        z-index: 10;
+        p {
+          font-size: 14px;
+          text-align: center;
+          letter-spacing: 1px;
+          margin-bottom: 10px;
+        }
+        span {
+          font-size: 16px;
+          letter-spacing: 1px;
+          width: 100%;
+          margin: 0 auto;
+          border-top: 2px solid #717171;
+          border-bottom: 2px solid #717171;
+          padding: 16px 30px;
+          &.green {
+            padding: 0;
+            border: 0;
+            width: 95%;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            // text-align: center;
+            // text-justify: auto;
+            // text-align-last: center;
+          }
+        }
+      }
+      .qa {
+        width: 100%;
+        li {
+          margin-bottom: 30px;
+          p {
+            line-height: 1.5;
+          }
+        }
+      }
+      .ask-btn {
+        margin-bottom: 0;
+        a {
+          padding: 16px 20px;
+          letter-spacing: 1rem;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+.qa-block {
+  width: 100%;
+  margin-bottom: 100px;
+  position: relative;
+  .hand {
+    position: absolute;
+    left: 0;
+    top: -900px;
+    z-index: -1;
+  }
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.5));
+  li {
+    .qa-title {
+      background-color: #37AE7D;
+      padding: 40px;
+      position: relative;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+      &:before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        bottom: -25px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-width: 26.0px 15px 0 15px;
+        border-color: #37AE7D transparent transparent transparent;
+      }
+    }
+    .qa-content {
+      background-color: #fff;
+      height: 300px;
+    }
+  }
+  @media (max-width: 768px) {
+    .hand {
+      position: absolute;
+      left: -15%;
+      top: -560px;
+      transform: scale(0.8);
+      z-index: -100 !important;
+    }
+    li {
+      .qa-title {
+        padding: 20px;
+      }
+    }
+  }
+}
+.marking-banner {
+  margin-top: 120px;
+  margin-bottom: 80px;
+  background-image: url('./廣告行銷/光果網站｜行銷介紹-09 1.png');
+  height: calc(100vh - 120px);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .marking-chinese {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    bottom: 0;
+    margin: auto;
+  }
+  .marking-english {
+    position: absolute;
+    left: 13%;
+    top: 61%;
+    bottom: 0;
+    margin: auto;
+  }
+}
+.marking-road {
+  margin-bottom: 120px;
+  position: relative;
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+  .road-title {
+    position: absolute;
+    top: -1%;
+    right: 10%;
+    text-align: center;
+    p {
+      color: #727171;
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: 1.3px;
+      margin-bottom: 10px;
+    }
+    span {
+      color: #37AE7D;
+      font-size: 52px;
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
+  }
+}
+
+.marking-service {
+  margin-bottom: 125px;
+  h3 {
+    margin-bottom: 60px;
+    text-align: center;
+    p {
+      color: #727171;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    span {
+      color: #37AE7D;
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
+  }
+  .marking-kind {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    text-align: center;
+    li {
+      width: 25%;
+      color: #727171;
+      font-weight: bold;
+      font-size: 32px;
+      margin-bottom: 60px;
+      letter-spacing: 3px;
+    }
+  }
+  .kind-img {
+    display: flex;
+    gap: 1%;
+    justify-content: space-between;
+    .kind-img-item {
+      width: 32%;
+    }
+  }
+}
+.painpointer {
+  margin-bottom: 120px;
+  h3 {
+    margin-bottom: 60px;
+    text-align: center;
+    p {
+      color: #727171;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    span {
+      color: #37AE7D;
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
+  }
+  .compare {
+    display: flex;
+    gap: 4%;
+    justify-content: space-between;
+    li {
+      padding: 68px 40px;
+      width: 29.3333%;
+      background-color: rgba(114, 113, 113, 0.1);
+      img {
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+        margin-bottom: 40px;
+      }
+      p {
+        color: #37AE7D;
+        font-size: 22px;
+        text-align: center;
+        letter-spacing: 1.3px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+      span {
+        color: #727171;
+        line-height: 1.5;
+        text-align: justify;
+        display: block;
+      }
+      span:last-child {
+        margin-left: 6px;
+      }
+    }
+  }
+  .logo-img {
+    img {
+      display: block;
+      margin: 0 auto;
     }
   }
 }
