@@ -1578,28 +1578,34 @@ footer {
     }
     &.astronaut {
       top: 30%;
-      transform: scale(0.8);
+      transform: scale(0.7);
     }
     &.computed {
       right: 10%;
       top: 40%;
-      transform: scale(1);
+      transform: scale(0.9);
     }
     &.chinese {
-      bottom: 100px;
+      bottom: 70px;
       left: 65px;
-      transform: scale(0.9);
+      transform: scale(0.8);
       margin-bottom: 20px;
     }
     &.english {
-      bottom: 60px;
+      bottom: 40px;
       left: 70px;
-      transform: scale(0.9);
+      transform: scale(0.8);
     }
     &.logo {
-      bottom: -48%;
+      bottom: -55%;
       left: 20%;
       transform: translate(-50%, -50%);
+    }
+    &.astronaut2 {
+      display: none;
+    }
+    &.line {
+      display: none;
     }
     @media (max-width: 768px) {
       &.purple-moon {
@@ -1642,12 +1648,15 @@ footer {
       &.logo {
         display: none;
       }
+      
       &.line {
+        display: block;
         bottom: 10%;
         left: 20%;
         transform: scale(0.7);
       }
       &.astronaut2 {
+        display: block;
         bottom: -10%;
         left: 25%;
       }
@@ -1968,6 +1977,9 @@ footer {
   width: 100%;
   margin-bottom: 100px;
   position: relative;
+  &.marking-qa {
+    margin-bottom: 250px;
+  }
   .hand {
     position: absolute;
     left: 0;
@@ -2001,6 +2013,9 @@ footer {
     }
   }
   @media (max-width: 768px) {
+    &.marking-qa {
+      margin-bottom: 60px;
+    }
     .hand {
       position: absolute;
       left: -15%;
@@ -2038,17 +2053,39 @@ footer {
   .marking-english {
     position: absolute;
     left: 13%;
-    top: 61%;
+    top: 66%;
     bottom: 0;
     margin: auto;
+  }
+  @media (max-width: 768px) {
+    background-position: center center;
+    height: 300px;
+    margin-top: 100px;
+    margin-bottom: 0;
+    background-size: contain;
+    .marking-chinese {
+      transform: scale(0.4);
+      top: -10%;
+      left: -35%;
+    }
+    .marking-english {
+      transform: scale(0.4);
+      top: 55%;
+      left: -26.5%;
+    }
   }
 }
 .marking-road {
   margin-bottom: 120px;
   position: relative;
-  img {
-    object-fit: cover;
-    width: 100%;
+  .marking-road-img {
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+    &.mobile {
+      display: none;
+    }
   }
   .road-title {
     position: absolute;
@@ -2067,6 +2104,67 @@ footer {
       font-size: 52px;
       font-weight: bold;
       letter-spacing: 4px;
+    }
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url(./廣告行銷/237\ [轉換]-02\ 1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    margin-bottom: 60px;
+    .marking-road-img {
+      position: relative;
+      display: none;
+      &:before {
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background-color: #FFC086;
+        content: '';
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        background-image: url(./廣告行銷/光果網站｜首頁-29\ 1.png);
+        height: 60px;
+        width: 60px;
+        bottom: -60px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+      }
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+      &.mobile {
+        display: flex;
+        justify-content: center;
+        gap: 8%;
+        .left-block, .right-block {
+          width: 40%;
+          img {
+            margin-bottom: 20px;
+          }
+        }
+        .right-block {
+          margin-top: 30px;
+        }
+      }
+    }
+    .road-title {
+      display: block;
+      position: static;
+      margin-bottom: 40px;
+      p {
+        font-size: 14px;
+      }
+      span {
+        font-size: 28px;
+      }
     }
   }
 }
@@ -2113,6 +2211,46 @@ footer {
       width: 32%;
     }
   }
+  @media (max-width: 768px) {
+    margin-bottom: 60px;
+    h3 {
+      margin-bottom: 30px;
+      text-align: center;
+      p {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      span {
+        font-size: 26px;
+      }
+    }
+    .marking-kind {
+      margin-bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 15px;
+      text-align: center;
+      li {
+        width: 33.3333%;
+        color: #727171;
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 40px;
+        letter-spacing: 1px;
+      }
+    }
+    .kind-img {
+      display: flex;
+      gap: 1%;
+      justify-content: space-between;
+      .kind-img-item {
+        width: 49%;
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
 }
 .painpointer {
   margin-bottom: 120px;
@@ -2132,6 +2270,9 @@ footer {
       font-weight: bold;
       letter-spacing: 4px;
     }
+  }
+  .ask-btn {
+    display: none;
   }
   .compare {
     display: flex;
@@ -2170,6 +2311,70 @@ footer {
     img {
       display: block;
       margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 60px;
+    h3 {
+      margin-bottom: 40px;
+      text-align: center;
+      p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+      span {
+        font-size: 26px;
+        letter-spacing: 8px;
+      }
+    }
+    .compare {
+      gap: 0;
+      flex-wrap: wrap;
+      li {
+        padding: 30px 40px;
+        width: 100%;
+        margin-bottom: 30px;
+        img {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .logo-img {
+      display: none;
+    }
+    .ask-btn {
+      display: block;
+      margin-bottom: 0px;
+      a {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 40px;
+        background-color: #37AE7D;
+        text-decoration: none;
+        color: #fff;
+        padding: 12px 40px;
+        letter-spacing: 1rem;
+        font-size: 20px;
+        font-weight: 600;
+        position: relative;
+        &:before {
+          pointer-events: none;
+          position: absolute;
+          content: '';
+          background-image: url('./網頁設計/Group\ 22.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          top: 50%;
+          left: 75%;
+          transform: translate(-50%, -50%);
+          margin: auto;
+          width: 40%;
+          height: 15%;
+        }
+      }
     }
   }
 }

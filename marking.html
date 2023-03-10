@@ -13,8 +13,31 @@
 </head>
 
 <body>
+  <ul class="mobile-menu">
+    <li>
+      <a href="about.html">關於我們</a>
+    </li>
+    <li>
+      <a href="#">流程須知</a>
+    </li>
+    <li>
+      <a href="#">市場行銷</a>
+    </li>
+    <li>
+      <a href="#">文創專區</a>
+    </li>
+    <li>
+      <a href="#">作品展示</a>
+    </li>
+    <li class="connection-block">
+      <a href="#" class="connection">聯絡我們</a>
+    </li>
+  </ul>
   <header>
-    <div class="container d-flex justify-between align-center">
+    <div class="container d-flex justify-between align-center header">
+      <div class="toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
       <h1>光果文創設計
         <a href="index.html"></a>
       </h1>
@@ -49,7 +72,21 @@
     </div>
   </section>
   <section class="marking-road">
-    <img src="./廣告行銷/Group 31.png" alt="">
+    <div class="marking-road-img">
+      <img src="./廣告行銷/Group 31.png" alt="">
+    </div>
+    <div class="marking-road-img mobile">
+      <div class="left-block">
+        <img src="./廣告行銷/光果網站｜行銷介紹-19.png" alt="">
+        <img src="./廣告行銷/光果網站｜行銷介紹-20.png" alt="">
+        <img src="./廣告行銷/光果網站｜行銷介紹-21.png" alt="">
+      </div>
+      <div class="right-block">
+        <img src="./廣告行銷/光果網站｜行銷介紹-22.png" alt="">
+        <img src="./廣告行銷/光果網站｜行銷介紹-23.png" alt="">
+        <img src="./廣告行銷/光果網站｜行銷介紹-24.png" alt="">
+      </div>
+    </div>
     <div class="road-title">
       <p>Customized analysis doubles sales</p>
       <span>客製化分析讓銷量倍增</span>
@@ -106,12 +143,15 @@
         </li>
       </ul>
     </div>
+    <div class="ask-btn">
+      <a href="#">了解報價</a>
+    </div>
     <div class="logo-img">
       <img src="./網頁設計/光果網站｜網設介紹_LOGO 1.png" alt="">
     </div>
   </section>
   <div class="container">
-    <div class="qa-block" style="margin-bottom: 250px;">
+    <div class="qa-block marking-qa">
       <ul>
         <li>
           <div class="qa-title">
@@ -132,8 +172,10 @@
       </ul>
     </div>
   </div>
+  <div class="top_bg"></div>
   <footer>
     <div class="container">
+      <!-- <div class="top_bg"></div> -->
       <h2>Greateful Studio</h2>
       <ul class="footer-menu">
         <li>
@@ -148,8 +190,8 @@
           </ul>
         </li>
         <li>
-          <p>contact us</p>
-          <h3>聯絡我們</h3>
+          <p class="desk">contact us</p>
+          <h3 class="desk">聯絡我們</h3>
           <p>Line: @714dbblv</p>
           <p>Email: greatefulgod17@gmail.com</p>
         </li>
@@ -161,6 +203,9 @@
             <a href="#">
               <i class="fa-brands fa-instagram"></i>
             </a>
+            <a href="#">
+              <i class="fa-solid fa-b"></i>
+            </a>
           </div>
         </li>
       </ul>
@@ -169,6 +214,17 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+    const toggle_menu = document.querySelector('.toggle');
+
+    toggle_menu.addEventListener('click', (e) => {
+      const mobile_menu = document.querySelector('.mobile-menu');
+      let toggle_class = mobile_menu.classList.contains('show')
+      if (toggle_class) {
+        mobile_menu.classList.remove('show')
+      } else {
+        mobile_menu.classList.add('show')
+      }
+    })
   </script>
 </body>
 
