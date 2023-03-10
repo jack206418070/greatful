@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap");
 html,
 body,
 div,
@@ -87,7 +87,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: "Noto Serif TC", serif, "Roboto", sans-serif;
+  font-family: "Noto Sans HK", sans-serif;
 }
 
 /* HTML5 display-role reset for older browsers */
